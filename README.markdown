@@ -113,7 +113,8 @@ uchiwa::ssl: { 'certfile': '/opt/ssl/%{::hostname}.crt', 'keyfile': '/opt/ssl/%{
 ```
 ## Users Options
 
-Example of declaring the UsersOptions hash as defined in https://docs.uchiwa.io/getting-started/configuration/#users-options
+Example of declaring the UsersOptions hash as defined in https://docs.uchiwa.io/getting-started/configuration/#users-options:
+
 Via hiera:
 ```
 uchiwa::usersoptions:
