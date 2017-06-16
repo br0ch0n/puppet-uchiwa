@@ -64,6 +64,17 @@
       "<%= k %>": "<%= v %>"<%= ',' if idx != (@usersoptions.size - 1) %>
       <%- end -%>
     <%- end -%>
+   }<%= ',' if @jira.size > 0 %>
+  <%- end -%>
+  <%- if @jira.size > 0 -%>
+    "jira": {
+    <%- @jira.each_with_index do |(k,v), idx| -%>
+      <%- if [true, false].include? v -%>
+      "<%= k %>": <%= v %><%= ',' if idx != (@jira.size - 1) %>
+      <%- else -%>
+      "<%= k %>": "<%= v %>"<%= ',' if idx != (@jira.size - 1) %>
+      <%- end -%>
+    <%- end -%>
    }
   <%- end -%>
   }

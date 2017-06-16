@@ -155,6 +155,7 @@ class uchiwa (
   $auth                 = $uchiwa::params::auth,
   $ssl                  = $uchiwa::params::ssl,
   $usersoptions         = $uchiwa::params::usersoptions,
+  $jira                 = $uchiwa::params::jira,
 ) inherits uchiwa::params {
 
   # validate parameters here
@@ -179,6 +180,7 @@ class uchiwa (
   validate_hash($auth)
   validate_hash($ssl)
   validate_hash($usersoptions)
+  validate_hash($jira)
 
   anchor { 'uchiwa::begin': } ->
   class { 'uchiwa::install': } ->
